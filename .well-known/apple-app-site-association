@@ -3,7 +3,17 @@
       "details": [
            {
              "appIDs": [ "MJQ7VLZ27P.com.unisys.inteliapp.oneapp"],
-             "components": []
+             "components": [
+              {                  
+                "/": "/","comment": "Matches any URL with a path that starts with /buy/."
+              },
+              {                  
+                "/": "/*","comment": "Matches any URL with a path that starts with /buy/."
+              },
+              {                  
+                "/": "/index/*","comment": "Matches any URL with a path that starts with /buy/."
+              }
+             ]
            }
        ]
    }
