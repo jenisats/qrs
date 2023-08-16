@@ -17,7 +17,7 @@ function getMobileOperatingSystem() {
 
     // Windows Phone must come first because its UA also contains "Android"
     if (/windows phone/i.test(userAgent)) {
-        alert(userAgent)
+        alert("Windows Not Applicable)
     }
 
     if (/android/i.test(userAgent)) {
@@ -28,13 +28,16 @@ function getMobileOperatingSystem() {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         window.location.href = "https://apps.apple.com/app/inteliapp-by-unisys/id1607251466";
     }
+}
 
-   alert(userAgent)
+
+function callSetTimeOut(){
+    setTimeout(getMobileOperatingSystem, 5000)
 }
      </script>
 </head>
 
-<body onload="getMobileOperatingSystem()">
+<body onload="callSetTimeOut()">
     <h1>InteliApp By Unisys</h1>
 </body>
 
