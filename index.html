@@ -17,7 +17,7 @@ function getMobileOperatingSystem() {
 
     // Windows Phone must come first because its UA also contains "Android"
     if (/windows phone/i.test(userAgent)) {
-        window.location.href = "https://www.unisys.com";
+        alert(userAgent)
     }
 
     if (/android/i.test(userAgent)) {
@@ -29,7 +29,7 @@ function getMobileOperatingSystem() {
         window.location.href = "https://apps.apple.com/app/inteliapp-by-unisys/id1607251466";
     }
 
-   window.location.href = "https://www.unisys.com";
+   alert(userAgent)
 }
      </script>
 </head>
