@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>InteliApp By Unisys</title>
+    <script> // Get the device platform. 
+   // var platform = navigator.platform.toLowerCase(); // If the platform is Android, redirect to the Play Store. 
+    // if (platform.indexOf("android") > -1) { 
+    //     window.location.href = "https://play.google.com/store/apps/details?id=com.unisys.inteliapp.oneapp"; 
+    // } // If the platform is iOS, redirect to the App Store.
+    //  else if (platform.indexOf("iphone") > -1 || platform.indexOf("ipad") > -1) 
+    //  { window.location.href = "https://apps.apple.com/app/inteliapp-by-unisys/id1607251466"; } 
+
+
+function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+
+        alert("Windows Not Applicable")
+
+    }
+
+    if (/android/i.test(userAgent)) {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.unisys.inteliapp.oneapp"; 
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = "https://apps.apple.com/app/inteliapp-by-unisys/id1607251466";
+    }
+}
+
+
+function callSetTimeOut(){
+    setTimeout(getMobileOperatingSystem, 1000)
+}
+     </script>
+<title>Incident</title>
+</head>
+
+<body onload="callSetTimeOut()">
+    <h1>InteliApp By Unisys</h1>
+</body>
+
+</html>
